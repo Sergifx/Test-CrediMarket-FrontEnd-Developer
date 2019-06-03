@@ -1,0 +1,44 @@
+<div class="card-container card-container--unique">
+  <div class="card card--center">
+    <div class="card__header">
+      <div class="card__logo"></div>
+    </div>
+    <div class="card__body">
+      <form class="form" formGroup="login">
+        <div class="form__rolebox form__rolebox--2">
+          <button class="button-clean button-role" type="button">
+            <div class="button-role-check" *ngIf="!role">
+            </div>
+            <div class="button-role__icon"></div>
+            <div class="button-role__title">Administrador</div>
+            <div class="button-role__description">Acceso completo<br />Lore Ipsum</div>
+          </button>
+          <button class="button-clean button-role" type="button">
+            <div class="button-role-check" *ngIf="!role">
+
+            </div>
+            <div class="button-role__icon"></div>
+            <div class="button-role__title">Agente</div>
+            <div class="button-role__description">Tipo de acceso<br />Lore Ipsum</div>
+          </button>
+        </div>
+        <div class="form__input">
+          <label class="form__label">Email</label>
+          <input class="full-input" type="email" placeholder="Email" formControlName="email" />
+        </div>
+        <div class="form__input">
+          <label class="form__label">Password</label>
+          <input class="full-input" type="password" placeholder="Password" formControlName="password" />
+        </div>
+        <div class="form__submit">
+          <button class="button-clean button__submit">Iniciar sesión</button>
+        </div>
+        <div class="form__forgot">
+          <label>
+            <a href="">¿Has olvidado tu contraseña?</a>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

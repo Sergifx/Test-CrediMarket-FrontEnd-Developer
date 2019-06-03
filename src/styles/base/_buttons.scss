@@ -1,0 +1,58 @@
+$roletext-margin-sep: 6px 0px;
+
+.button-clean {
+  border: none;
+  background-color: #fff;
+  color: black;
+  outline: none;
+}
+
+.button-role {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  width: 100%;
+  max-width: 140px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+  border: solid 1px black;
+  &-check {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('assets/icons/check.png');
+    position: absolute;
+    margin: -20px 0px 0px 68px;
+  }
+
+  &:active {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
+  }
+  &__icon {
+    margin: $roletext-margin-sep;
+  }
+  &__title {
+    margin: $roletext-margin-sep;
+    font-weight: bold;
+  }
+  &__description {
+    margin: $roletext-margin-sep;
+    color: #797979;
+  }
+}
+.button {
+  &__submit {
+    width: 100%;
+    padding: 12px;
+    color: black;
+    border: solid 1px black;
+    background-color: white;
+    box-shadow: 2px 2px black;
+  }
+}

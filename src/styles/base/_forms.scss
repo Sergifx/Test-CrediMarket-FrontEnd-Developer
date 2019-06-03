@@ -1,0 +1,30 @@
+$input-margin-sep: 10px 0px;
+$label-margin-sep: 6px 0px;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  &__rolebox {
+    display: flex;
+    flex-direction: row;
+  }
+  &__rolebox--2{
+    justify-content: space-between;
+  }
+  &__input {
+    display: flex;
+    flex-direction: column;
+    margin: $input-margin-sep;
+  }
+  &__submit {
+    display: flex;
+    margin: $input-margin-sep;
+  }
+  &__forgot {
+    margin: $input-margin-sep;
+    text-align: center;
+  }
+  &__label {
+    margin: $label-margin-sep;
+  }
+}
