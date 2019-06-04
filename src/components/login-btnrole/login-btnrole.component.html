@@ -1,0 +1,17 @@
+<div class="form__rolebox form__rolebox--2">
+  <button class="button-clean button-role role-admin" type="button" (click)="roleChanged.emit(true)">
+    <div class="button-role-check" *ngIf="role">
+    </div>
+    <div class="button-role__icon button-role__icon-admin"></div>
+    <div class="button-role__title">Administrador</div>
+    <div class="button-role__description">Acceso completo<br />Lore Ipsum</div>
+  </button>
+  <button class="button-clean button-role role-agent" type="button" (click)="roleChanged.emit(false)">
+    <div class="button-role-check" *ngIf="!role">
+
+    </div>
+    <div class="button-role__icon button-role__icon-agent"></div>
+    <div class="button-role__title">Agente</div>
+    <div class="button-role__description">Tipo de acceso<br />Lore Ipsum</div>
+  </button>
+</div>

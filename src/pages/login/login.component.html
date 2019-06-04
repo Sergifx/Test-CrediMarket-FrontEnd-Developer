@@ -1,0 +1,39 @@
+<div class="card-container card-container--unique">
+  <div class="card card--center">
+    <div class="card__header">
+      <div class="card__logo"></div>
+    </div>
+    <div class="card__body">
+      <form class="form" [formGroup]="login">
+        <app-login-btnrole [role]="role" (roleChanged)="role = $event"></app-login-btnrole>
+        <div class="form__input">
+          <label class="form__label">Email</label>
+          <input class="full-input" type="email" placeholder="Introduce un email" formControlName="email" />
+          <ng-container *ngIf="email.invalid && (email.dirty || email.touched)">
+            <label class="form__label-error" *ngIf="email.errors.required">Se requiere un correo</label>
+            <label class="form__label-error" *ngIf="email.errors.maxlength">Máximo 50 carácteres</label>
+            <label class="form__label-error" *ngIf="email.errors.email">El formato no es el adecuado</label>
+          </ng-container>
+        </div>
+        <div class="form__input">
+          <label class="form__label">Contraseña</label>
+          <input class="full-input" type="password" placeholder="Introduce una contraseña" formControlName="password" />
+          <ng-container *ngIf="password.invalid && (password.dirty || password.touched)">
+            <label class="form__label-error" *ngIf="password.errors.required">Se requiere una contraseña</label>
+            <label class="form__label-error" *ngIf="password.errors.maxlength">Máximo 50 carácteres</label>
+            <label class="form__label-error" *ngIf="password.errors.minlength">Mínimo 8 carácteres</label>
+          </ng-container>
+        </div>
+        <div class="form__submit">
+          <button class="button-clean button__submit" type="button" (click)="onSubmit()" [disabled]="!login.valid"
+            [ngClass]="{'button__submit-invalid': !login.valid}">Iniciar sesión</button>
+        </div>
+        <div class="form__forgot">
+          <label>
+            <a href="">¿Has olvidado tu contraseña?</a>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
