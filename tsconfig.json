@@ -25,9 +25,7 @@
       "@models/*": ["core/models/*"],
       "@config/*": ["config/*"],
       "@components/*": ["components/*"],
-      "@services/*": ["providers/services/*"],
-      "@stores/*": ["providers/stores/*"],
-      "@db/*": ["providers/db/*"],
+      "@stores/*": ["core/store/*"],
       "@constants/*": ["core/constants/*"],
     }
   }

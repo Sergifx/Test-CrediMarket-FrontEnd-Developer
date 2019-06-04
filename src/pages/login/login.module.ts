@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from '@pages/login/login.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { LoginBtnroleComponent } from '@components/login-btnrole/login-btnrole.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AngularFontAwesomeModule
+    CommonModule
   ],
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, LoginBtnroleComponent],
   exports: [LoginComponent]
 })
 export class LoginModule { }

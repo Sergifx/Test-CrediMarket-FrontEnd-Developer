@@ -4,34 +4,29 @@
       <div class="card__logo"></div>
     </div>
     <div class="card__body">
-      <form class="form" formGroup="login">
-        <div class="form__rolebox form__rolebox--2">
-          <button class="button-clean button-role" type="button">
-            <div class="button-role-check" *ngIf="!role">
-            </div>
-            <div class="button-role__icon"></div>
-            <div class="button-role__title">Administrador</div>
-            <div class="button-role__description">Acceso completo<br />Lore Ipsum</div>
-          </button>
-          <button class="button-clean button-role" type="button">
-            <div class="button-role-check" *ngIf="!role">
-
-            </div>
-            <div class="button-role__icon"></div>
-            <div class="button-role__title">Agente</div>
-            <div class="button-role__description">Tipo de acceso<br />Lore Ipsum</div>
-          </button>
-        </div>
+      <form class="form" [formGroup]="login">
+        <app-login-btnrole [role]="role" (roleChanged)="role = $event"></app-login-btnrole>
         <div class="form__input">
           <label class="form__label">Email</label>
-          <input class="full-input" type="email" placeholder="Email" formControlName="email" />
+          <input class="full-input" type="email" placeholder="Introduce un email" formControlName="email" />
+          <ng-container *ngIf="email.invalid && (email.dirty || email.touched)">
+            <label class="form__label-error" *ngIf="email.errors.required">Se requiere un correo</label>
+            <label class="form__label-error" *ngIf="email.errors.maxlength">Máximo 50 carácteres</label>
+            <label class="form__label-error" *ngIf="email.errors.email">El formato no es el adecuado</label>
+          </ng-container>
         </div>
         <div class="form__input">
-          <label class="form__label">Password</label>
-          <input class="full-input" type="password" placeholder="Password" formControlName="password" />
+          <label class="form__label">Contraseña</label>
+          <input class="full-input" type="password" placeholder="Introduce una contraseña" formControlName="password" />
+          <ng-container *ngIf="password.invalid && (password.dirty || password.touched)">
+            <label class="form__label-error" *ngIf="password.errors.required">Se requiere una contraseña</label>
+            <label class="form__label-error" *ngIf="password.errors.maxlength">Máximo 50 carácteres</label>
+            <label class="form__label-error" *ngIf="password.errors.minlength">Mínimo 8 carácteres</label>
+          </ng-container>
         </div>
         <div class="form__submit">
-          <button class="button-clean button__submit">Iniciar sesión</button>
+          <button class="button-clean button__submit" type="button" (click)="onSubmit()" [disabled]="!login.valid"
+            [ngClass]="{'button__submit-invalid': !login.valid}">Iniciar sesión</button>
         </div>
         <div class="form__forgot">
           <label>

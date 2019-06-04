@@ -82,6 +82,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "codeCoverage": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -118,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Test-CrediMarket-FrontEnd-Developer"
+    }
+  },
+  "defaultProject": "Test-CrediMarket-FrontEnd-Developer",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

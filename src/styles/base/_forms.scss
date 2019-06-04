@@ -8,7 +8,7 @@ $label-margin-sep: 6px 0px;
     display: flex;
     flex-direction: row;
   }
-  &__rolebox--2{
+  &__rolebox--2 {
     justify-content: space-between;
   }
   &__input {
@@ -26,5 +26,10 @@ $label-margin-sep: 6px 0px;
   }
   &__label {
     margin: $label-margin-sep;
+  }
+  &__label-error {
+    color: red;
+    margin: 4px 0px;
+    font-size: 12px;
   }
 }

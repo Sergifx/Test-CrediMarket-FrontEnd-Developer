@@ -35,7 +35,20 @@ $roletext-margin-sep: 6px 0px;
     box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
   }
   &__icon {
+    width: 40px;
+    height: 40px;
     margin: $roletext-margin-sep;
+    border-radius: 25px;
+    background-size: 25px;
+    background-position: center;
+    background-color: #cacaca;
+    background-repeat: no-repeat;
+  }
+  &__icon-admin{
+    background-image: url('assets/icons/admin-logo.svg');
+  }
+  &__icon-agent {
+    background-image: url('assets/icons/agent-logo.svg');
   }
   &__title {
     margin: $roletext-margin-sep;
@@ -54,5 +67,8 @@ $roletext-margin-sep: 6px 0px;
     border: solid 1px black;
     background-color: white;
     box-shadow: 2px 2px black;
+  }
+  &__submit-invalid {
+    color: grey;
   }
 }
