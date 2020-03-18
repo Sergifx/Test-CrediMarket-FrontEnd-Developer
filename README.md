@@ -1,4 +1,4 @@
-# Ways to do Forms in Angular 8
+# How to implement reactive forms in Angular 8
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
 
